@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Colorex</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  
+  <div class="container pt-3 mb-3">
+    <div class="row text-center justify-content-center">
+      <div class="col-4">
+        <div class="progress md-progress"  style="height: 20px">
+            <div class="progress-bar bg-success" id="stepOneIndicator" role="progressbar" style="width: 0%; height: 20px" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="progress md-progress" style="height: 20px">
+            <div class="progress-bar bg-success" id="stepTwoIndicator" role="progressbar" style="width: 0%; height: 20px" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="progress md-progress" style="height: 20px">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 0%; height: 20px" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div id="stepOne">
+    <div class="container-fluid pt-5"  style="background-color: #f5f5f5 ;">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 text-center"><p class="font-weight-bold indigo-text">ANALISIS DE MI PELO</p></div>
+          <div class="col-lg-6 pt-2">
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <button class="btn btn-outline-primary waves-effect" id="teñido">
+                  <p class="p-0 m-0">CABELLO TEÑIDO</p>
+                </button>
+              </div>
+              
+              <div class="col-md-6">
+                <button class="btn btn-outline-primary waves-effect" id="virgen">
+                  <p class="p-0 m-0">CABELLO VIRGEN</p>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 pt-2">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="btn btn-outline-secondary waves-effect" id="largo">
+                  <p class="p-0 m-0">CABELLO LARGO</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="btn btn-outline-secondary waves-effect" id="corto">
+                  <p class="p-0 m-0">CABELLO CORTO</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="col-lg-6 pt-2" >
+            <div class="d-flex justify-content-center my-4">
+              <span class="font-weight-bold indigo-text mr-2">Poroso:</span>
+              <span class="font-weight-bold indigo-text mr-2">0</span>
+                  <form class="w-75">
+                      <input class="border-0 custom-range" type="range" min="0" max="100" id="poroso" />
+                  </form>
+              <span class="font-weight-bold indigo-text ml-2">100</span>
+              <div class="mx-2  font-weight-bold p-1 pb-0 z-depth-1 border border-secondary text-secondary" id="porosoC" style="height: 32px; margin-top: -5px"></div>
+            </div>
+            <script type="text/javascript">
+              var slider1 = document.getElementById("poroso");
+              var output1 = document.getElementById("porosoC");
+              output1.innerHTML = slider1.value;
+
+              slider1.oninput = function() {
+                output1.innerHTML = this.value;
+              }
+            </script>
+          </div>
+          
+          <div class="col-lg-6 pt-2" >
+            <div class="d-flex justify-content-center my-4">
+              <span class="font-weight-bold indigo-text mr-2">Lacio:</span>
+              <span class="font-weight-bold indigo-text mr-2">0</span>
+                  <form class="w-75">
+                      <input class="border-0 custom-range" type="range" min="0" max="100" id="lacio" />
+                  </form>
+              <span class="font-weight-bold indigo-text ml-2">100</span>
+              <div class="mx-2  font-weight-bold p-1 pb-0 z-depth-1 border border-secondary text-secondary" id="lacioC" style="height: 32px; margin-top: -5px"></div>
+            </div>
+            <script type="text/javascript">
+              var slider2 = document.getElementById("lacio");
+              var output2 = document.getElementById("lacioC");
+              output2.innerHTML = slider2.value;
+
+              slider2.oninput = function() {
+                output2.innerHTML = this.value;
+              }
+            </script>
+
+          </div>
+
+          <div class="col-lg-6 pt-2" >
+            <div class="d-flex justify-content-center my-4">
+              <span class="font-weight-bold indigo-text mr-2">Grueso:</span>
+              <span class="font-weight-bold indigo-text mr-2">0</span>
+                  <form class="w-75">
+                      <input class="border-0 custom-range" type="range" min="0" max="100" id="grueso" />
+                  </form>
+              <span class="font-weight-bold indigo-text ml-2">100</span>
+              <div class="mx-2  font-weight-bold p-1 pb-0 z-depth-1 border border-secondary text-secondary" id="gruesoC" style="height: 32px; margin-top: -5px"></div>
+            </div>
+            <script type="text/javascript">
+              var slider3 = document.getElementById("grueso");
+              var output3 = document.getElementById("gruesoC");
+              output3.innerHTML = slider3.value;
+
+              slider3.oninput = function() {
+                output3.innerHTML = this.value;
+              }
+            </script>
+          </div>
+
+          <div class="col-lg-6 pt-2" >
+            <div class="d-flex justify-content-center my-4">
+              <span class="font-weight-bold indigo-text mr-2">Canas:</span>
+              <span class="font-weight-bold indigo-text mr-2">0</span>
+                  <form class="w-75">
+                      <input class="border-0 custom-range" type="range" min="0" max="100" id="canas"/>
+                  </form>
+              <span class="font-weight-bold indigo-text ml-2">100</span>
+              <div class="mx-2  font-weight-bold p-1 pb-0 z-depth-1 border border-secondary text-secondary" id="canasC" style="height: 32px; margin-top: -5px"></div>
+            </div>
+            <script type="text/javascript">
+              var slider4 = document.getElementById("canas");
+              var output4 = document.getElementById("canasC");
+              output4.innerHTML = slider4.value;
+
+              slider4.oninput = function() {
+                output4.innerHTML = this.value;
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid pt-5"  style="background-color: #fafafa ;">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="row justify-content-center">
+              <div class="col-12 text-center"><p class="font-weight-bold indigo-text">MI TONO ACTUAL</p></div>
+              <div class="col-12 text-center mb-3">
+                <div class="btn-group" role="group" aria-label="Basic example" id="button_group">
+                    <button type="button" class="btn btn-deep-purple active btn-lg"><span>RAIZ</span> <i class="fas fa-check text-success" id="check_raiz"></i></button>
+                    <button type="button" class="btn btn-deep-purple btn-lg"><span>MEDIO</span> <i class="fas fa-check text-success" id="check_medio"></i></button>
+                    <button type="button" class="btn btn-deep-purple btn-lg"><span>PUNTA</span> <i class="fas fa-check text-success" id="check_punta"></i></button>
+                </div>
+              </div>
+              <div  class="col-12">
+                <div class="row text-center justify-content-center" id="ColorTable">
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>1</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>2</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>3</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>4</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>5</p></div>
+                  <div class="w-100" id="divition"></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>6</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>7</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>8</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>9</p></div>
+                  <div class="col-2 btn btn-outline-light-blue btn-lg z-depth-0 "><p>10</p></div>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-12">
+            <center>
+              <button type="button" id="siguiente" class="btn btn-info btn-rounded">SIGUIENTE  <i class="fas fa-arrow-right"></i></button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="stepTwo">
+    <div class="container-fluid pt-5 pb-3" style="background-color: #f5f5f5 ;">
+      <div class="container">
+        <div class="row text-center" id="want">
+          <div class="col-12 text-center " id="title"><p class="font-weight-bold indigo-text">LO QUE QUIERO</p></div>
+          <div class="col-md-4 "><button type="button" class="btn btn-purple btn-block mt-3 py-5 active" id="color_parejo"><p class="h5 ">COLOR PAREJO</p></button></div>
+          <div class="col-md-4 "><button type="button" class="btn btn-purple btn-block mt-3 py-5 " id="mechas"><p class="h5 ">MECHAS</p></button></div>
+          <div class="col-md-4 "><button type="button" class="btn btn-purple btn-block mt-3 py-5 " id="degradado"><p class="h5 ">DEGRADADO</p></button></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid pt-5" style="background-color: #fafafa ;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center " id="title2"><p class="font-weight-bold indigo-text">TABLA DE COLORES</p></div>
+          <div class="col-12 text-center pb-4">
+            <div class="row justify-content-around">
+              <div class="col-6 col-md-3 m-0 btn btn-outline-primary btn-lg z-depth-0" id="buttonOColor1">COLOR 1</div>
+              <div class="col-6 col-md-3 m-0 btn btn-outline-primary btn-lg z-depth-0" id="buttonOColor2">COLOR 2</div>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <div class="row" id="colorTable">
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>1<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>2<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>3<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>4<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>5<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>6<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>7<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>8<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>9<p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>10</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>11</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>12</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>13</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>14</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>15</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>16</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>17</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>18</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>19</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>20</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>21</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>22</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>23</p></div>
+              <div class="col-12 col-sm-6 col-md-2 m-0 btn btn-outline-info btn-lg z-depth-0 rounded-0"><p>24</p></div>
+            </div>
+          </div>
+          
+          <div class="col-12 text-center mt-4">
+                <button type="button" id="atras2" class="btn btn-info btn-rounded pr-4"><i class="fas fa-arrow-left"></i>  ATRAS</button>
+                <button type="button" id="siguiente2" class="btn btn-info btn-rounded">SIGUIENTE  <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script src="js/stepOne.js"></script>
+
+  <script src="js/stepTwo.js"></script>
+
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
